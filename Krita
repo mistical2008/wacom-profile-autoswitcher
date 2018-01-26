@@ -67,3 +67,9 @@ xsetwacom set "$DEVICE_PAD" Button 11 "key ctrl M"
 xsetwacom set "$DEVICE_PAD" ScrollDistance "10"
 xsetwacom set "$DEVICE_PAD" TapTime "50"
 
+## Touch setting
+xsetwacom set "$DEVICE_TOUCH" Touch off
+xsetwacom set "$DEVICE_TOUCH" Gesture on
+
+## Setting area for stylus
+xsetwacom set "$DEVICE_STYLUS" Area 0 0 15748 9843
