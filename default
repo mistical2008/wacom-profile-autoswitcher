@@ -31,10 +31,10 @@ xsetwacom set "$DEVICE_STYLUS" Suppress "4"  # data pt.s trimmed, default is 4, 
 xsetwacom set "$DEVICE_STYLUS" RawSample "2"  # data pt.s filtered, default is 2, 0-100
 #xsetwacom set "$DEVICE_STYLUS" ClickForce "27"  # pressure, default is 27, range is 0-2047
 xsetwacom set "$DEVICE_STYLUS" Threshold "27"  # pressure, default is 27, range is 0-2047
-xsetwacom set "$DEVICE_STYLUS" PressureCurve "5 10 90 95"  # Bezier curve, default is 0,0,100,100
+xsetwacom set "$DEVICE_STYLUS" PressureCurve "0 0 100 100"  # Bezier curve, default is 0,0,100,100
 xsetwacom set "$DEVICE_STYLUS" TabletPCButton "off"  # stylus tip + button, or "off" for hover mode
-xsetwacom set "$DEVICE_STYLUS" Mode "Absolute"  # or Relative cursor movement
-xsetwacom set "$DEVICE_STYLUS" Button 1 "1"  # left mouse click
+xsetwacom set "$DEVICE_STYLUS" Mode "Absolute"5  # or Relative cursor movement
+xsetwacom set "$DEVICE_STYLUS" Button 1 "1"  5# left mouse click
 xsetwacom set "$DEVICE_STYLUS" Button 2 "3"  # right mouse click
 xsetwacom set "$DEVICE_STYLUS" Button 3 "2"  # middle mouse click
 
@@ -43,7 +43,7 @@ xsetwacom set "$DEVICE_ERASER" Suppress "4"  # data pt.s trimmed, default is 4, 
 xsetwacom set "$DEVICE_ERASER" RawSample "2"  # data pt.s filtered, default is 2, 0-100
 #xsetwacom set "$DEVICE_ERASER " ClickForce "27"  # pressure, default is 27, range is 0-2047
 xsetwacom set "$DEVICE_ERASER" Threshold "27"  # pressure, default is 27, range is 0-2047
-xsetwacom set "$DEVICE_ERASER" PressureCurve "0 10 90 100"  # Bezier curve, default is 0,0,100,100
+xsetwacom set "$DEVICE_ERASER" PressureCurve "0 0 100 100"  # Bezier curve, default is 0,0,100,100
 xsetwacom set "$DEVICE_ERASER" Mode "Absolute"  # or Relative cursor movement
 xsetwacom set "$DEVICE_ERASER" Button 1 "1"
 
@@ -52,9 +52,9 @@ xsetwacom set "$DEVICE_PAD" Button 2 "key shift"
 xsetwacom set "$DEVICE_PAD" Button 3 "key ctrl shift P"
 xsetwacom set "$DEVICE_PAD" Button 8 "key ctrl D"
 
-xsetwacom set "$DEVICE_PAD" AbsWheelDown "key alt right"
+xsetwacom set "$DEVICE_PAD" AbsWheelDown "key 5"
 xsetwacom set "$DEVICE_PAD" Button 1 "key ctrl Z"  # button inside touchring
-xsetwacom set "$DEVICE_PAD" AbsWheelUp "key alt left"
+xsetwacom set "$DEVICE_PAD" AbsWheelUp "key 4"
 
 xsetwacom set "$DEVICE_PAD" Button 9 "key ctrl shift T"
 xsetwacom set "$DEVICE_PAD" Button 10 "key ctrl T"
