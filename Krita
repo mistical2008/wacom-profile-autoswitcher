@@ -72,4 +72,4 @@ xsetwacom set "$DEVICE_TOUCH" Touch off
 xsetwacom set "$DEVICE_TOUCH" Gesture on
 
 ## Setting area for stylus
-xsetwacom set "$DEVICE_STYLUS" Area 0 0 15748 9843
+xsetwacom set "$DEVICE_STYLUS" Area 0 0 31496 19686
