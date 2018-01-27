@@ -26,6 +26,9 @@ do
 	  	do
 	  		if [[ "$running_progr" -eq "$window_in_focus" ]] 
 	  		 then
+            #Placeholder for figma condition
+            ## elif [[ "$figma" -eq "Figma" ]]
+            ## $HOME/wacom-profile-switcher/figma
 	  			$HOME/wacom-profile-switcher/$name_of_progr
              else
                 $HOME/wacom-profile-switcher/default
