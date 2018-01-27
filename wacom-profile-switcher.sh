@@ -7,6 +7,8 @@ while true
 do
   #get ID of windows in the focus
   window_in_focus=`xprop -root |awk '/_NET_ACTIVE_WINDOW/ {print $5; exit;}'`
+  figma=`xdotool getwindowfocus getwindowname | tr -d '[:space:]''[="=]' | sed -r 's/(–|-)/ /g' | cut -f 2 -d " "`
+  echo $figma
   #if the focus didn't change - do nothing
   if [[ "$window_in_focus" -ne "$window_in_focus_old" ]]
    then
@@ -35,3 +37,20 @@ do
 
 sleep 1
 done
+
+## Get window name. Assign to variable
+# xprop | awk -F= '/_NET_WM_NAME/{print $2}' | tr -d '[:space:]' | sed -e 's/^"//' -e 's/"$//'
+# RESULT iOS10GUINativebyGreatSimpleStudio(Copy)–Figma-GoogleChrome
+
+# xprop | awk -F= '/_NET_WM_NAME/{print $2}' | tr -d '[:space:]''[="=]'
+# RESULT Sendilla–Figma-GoogleChrome
+
+# xprop | awk -F= '/_NET_WM_NAME/{print $2}' | tr -d '[:space:]''[="=]' | sed -r 's/(–|-)/ /g' | cut -f 2 -d " "
+#RESULT Figma
+
+# xdotool getwindowfocus getwindowname | tr -d '[:space:]''[="=]' | sed -r 's/(–|-)/ /g' | cut -f 2 -d " "
+
+## Cut Figma from window name. Assign to variable
+# cut -f 1 -d ':' /etc/passwd  cut first field from strings divided by ':'
+
+## Add condition to profile cycle
