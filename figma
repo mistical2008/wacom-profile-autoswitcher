@@ -16,10 +16,11 @@ DEVICE_STYLUS=`xsetwacom list dev | grep -E -o ".*stylus"`
 DEVICE_ERASER=`xsetwacom list dev | grep -E -o ".*eraser"`
 DEVICE_CURSOR=`xsetwacom list dev | grep -E -o ".*cursor"`
 DEVICE_PAD=`xsetwacom list dev | grep -E -o ".*pad"`
-DEVICE_TOUCH=`xsetwacom list dev | grep -E -o ".*touch"` 
+DEVICE_TOUCH=`xsetwacom list dev | grep -E -o ".*touch"`
 
 
 #notify user about used profile
+notify-send "Using Figma profile"
 
 #screen region where Stylus will work
 #for 1 screens: MapToOutput 1920x1080+0+0
@@ -48,17 +49,17 @@ xsetwacom set "$DEVICE_ERASER" Mode "Absolute"  # or Relative cursor movement
 xsetwacom set "$DEVICE_ERASER" Button 1 "1"
 
 ## pad = ID 11 = "$DEVICE_PAD"
-xsetwacom set "$DEVICE_PAD" Button 2 "key shift"
-xsetwacom set "$DEVICE_PAD" Button 3 "key ctrl shift P"
-xsetwacom set "$DEVICE_PAD" Button 8 "key ctrl D"
+xsetwacom set "$DEVICE_PAD" Button 2 "key ctrl shift h"
+xsetwacom set "$DEVICE_PAD" Button 3 "key ctrl shift l"
+xsetwacom set "$DEVICE_PAD" Button 8 "key ctrl shift 4"
 
-xsetwacom set "$DEVICE_PAD" AbsWheelDown "key 5"
+xsetwacom set "$DEVICE_PAD" AbsWheelDown "5"
 xsetwacom set "$DEVICE_PAD" Button 1 "key ctrl Z"  # button inside touchring
-xsetwacom set "$DEVICE_PAD" AbsWheelUp "key 4"
+xsetwacom set "$DEVICE_PAD" AbsWheelUp "4"
 
-xsetwacom set "$DEVICE_PAD" Button 9 "key ctrl shift T"
-xsetwacom set "$DEVICE_PAD" Button 10 "key ctrl T"
-xsetwacom set "$DEVICE_PAD" Button 11 "key ctrl W"
+xsetwacom set "$DEVICE_PAD" Button 9 "key super shift k"
+xsetwacom set "$DEVICE_PAD" Button 10 "key ctrl alt m"
+xsetwacom set "$DEVICE_PAD" Button 11 "key ctrl alt k"
 
 xsetwacom set "$DEVICE_PAD" ScrollDistance "30"
 xsetwacom set "$DEVICE_PAD" TapTime "50"
@@ -68,5 +69,4 @@ xsetwacom set "$DEVICE_TOUCH" Touch on
 xsetwacom set "$DEVICE_TOUCH" Gesture on
 
 ## Setting area for stylus
-xsetwacom set "$DEVICE_STYLUS" Area 0 0 15748 9843
-
+xsetwacom set "$DEVICE_STYLUS" Area 0 0 31496 19686

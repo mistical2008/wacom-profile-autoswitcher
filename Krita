@@ -64,7 +64,7 @@ xsetwacom set "$DEVICE_PAD" Button 9 "key ctrl shift A"
 xsetwacom set "$DEVICE_PAD" Button 10 "key ctrl K"
 xsetwacom set "$DEVICE_PAD" Button 11 "key ctrl M"
 
-xsetwacom set "$DEVICE_PAD" ScrollDistance "10"
+xsetwacom set "$DEVICE_PAD" ScrollDistance "20"
 xsetwacom set "$DEVICE_PAD" TapTime "50"
 
 ## Touch setting
