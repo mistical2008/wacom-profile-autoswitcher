@@ -24,7 +24,7 @@ while true; do
 					$HOME/wacom-profile-switcher/default
 				elif [[ "$running_progr" -eq "$window_in_focus" ]]; then
 					$HOME/wacom-profile-switcher/$name_of_progr
-				elif [[ "$figma" -eq "Figma" ]]; then
+				elif [[  "$running_progr" -ne "$window_in_focus" && "$figma" -eq "Figma" ]]; then
 					$HOME/wacom-profile-switcher/figma
 				fi
 			done

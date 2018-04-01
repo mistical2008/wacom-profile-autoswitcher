@@ -1,0 +1,12 @@
+#!/bin/bash
+LIST=$(ls);
+for i in $LIST
+do
+	sed -i 's/MapToOutput 3440x1440/MapToOutput 3440x1440/' $i;
+done
+exit 0
+if [[ $? == 0 ]]; then
+	echo Right
+else
+	error
+fi

@@ -22,9 +22,9 @@ DEVICE_TOUCH=`xsetwacom list dev | grep -E -o ".*touch"`
 #notify user about used profile
 
 #screen region where Stylus will work
-#for 1 screens: MapToOutput 1920x1080+0+0
+#for 1 screens: MapToOutput 3440x1440+0+0
 #for 2 screens: MapToOutput 3286x1080+0+0
-xsetwacom set "$DEVICE_STYLUS" MapToOutput 1920x1080+0+0
+xsetwacom set "$DEVICE_STYLUS" MapToOutput 3440x1440+0+0
 
 ## stylus = ID 12 = "Wacom Intuos4 6x9 stylus"
 xsetwacom set "$DEVICE_STYLUS" Suppress "4"  # data pt.s trimmed, default is 4, 0-20
